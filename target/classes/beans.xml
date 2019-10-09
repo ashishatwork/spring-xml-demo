@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="imran"  class=" com.stackroute.domain.Actor" >
+        <property name="name" value="Imran Khan"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="30"/>
+    </bean>
+
+    <bean id="Captain America"  class=" com.stackroute.domain.Actor" >
+        <property name="name" value="Chris"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="35"/>
+    </bean>
+
+    <bean id="blackmail"  class="com.stackroute.domain.Movie">
+        <property name="actor"  ref="imran"/>
+    </bean>
+    <bean id="Avengers"  class="com.stackroute.domain.Movie">
+        <property name="actor"  ref="Captain America"/>
+    </bean>
+
+</beans>
