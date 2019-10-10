@@ -41,7 +41,10 @@
         <property name="actor"  ref="Captain America" />
     </bean>
 
-    <bean id="demo"  init-method="customInit" destroy-method="customDestroy" class="com.stackroute.domain.BeanLifecycleDemoBean">
+    <bean init-method="customInit" destroy-method="customDestroy" class="com.stackroute.domain.BeanLifecycleDemoBean">
+
+    </bean>
+    <bean class="com.stackroute.domain.BeanLifecycleDemoBean">
 
     </bean>
 
