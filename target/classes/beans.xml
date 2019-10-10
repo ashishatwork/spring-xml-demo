@@ -41,6 +41,9 @@
         <property name="actor"  ref="Captain America" />
     </bean>
 
-<!--    <bean id="Rockstar" class="com.stackroute.domain.Movie" autowire="byType">-->
-<!--    </bean>-->
+    <bean id="demo"  init-method="customInit" destroy-method="customDestroy" class="com.stackroute.domain.BeanLifecycleDemoBean">
+
+    </bean>
+
+
 </beans>

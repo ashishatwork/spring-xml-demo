@@ -6,6 +6,7 @@ import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
 public class Main
@@ -18,7 +19,7 @@ public class Main
 //        System.out.println(movie.getActor());
 
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         System.out.println("file loaded.");
         Movie movieNew = (Movie)context.getBean("Avengers");
         System.out.println(movieNew.getActor());
@@ -38,7 +39,7 @@ public class Main
 //        System.out.println(movieNew3.getActor());
 
 
-
+        context.registerShutdownHook();
 
     }
 }
