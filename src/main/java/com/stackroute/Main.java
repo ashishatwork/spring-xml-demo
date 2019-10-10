@@ -12,17 +12,30 @@ public class Main
 {
     public static void main( String[] args )
     {
-        XmlBeanFactory factory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
-        System.out.println("file loaded");
-        Actor actor=(Actor)factory.getBean("imran");
-        Movie movie=(Movie)factory.getBean("blackmail");
-        System.out.println(movie.getActor());
+//        XmlBeanFactory factory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
+//        System.out.println("file loaded");
+//        Movie movie=(Movie)factory.getBean("blackmail");
+//        System.out.println(movie.getActor());
 
 
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         System.out.println("file loaded.");
         Movie movieNew = (Movie)context.getBean("Avengers");
         System.out.println(movieNew.getActor());
+
+        Movie movieNew1=(Movie)context.getBean("blackmail");
+        System.out.println(movieNew1.getActor());
+
+        Actor actNew = (Actor)context.getBean("Kriti");
+        System.out.println(actNew.toString());
+
+        Movie movieNew2= (Movie)context.getBean("Rockstar");
+        System.out.println(movieNew2.getActor());
+
+        System.out.println(movieNew1==movieNew2);
+
+        Movie movieNew3= (Movie)context.getBean("Jordan");
+        System.out.println(movieNew3.getActor());
 
 
     }
