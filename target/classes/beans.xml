@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="imran"  class="com.stackroute.domain.Actor" >
+    <bean id="actor"  class="com.stackroute.domain.Actor" >
         <property name="name" value="Imran Khan"/>
         <property name="gender" value="Male"/>
         <property name="age" value="30"/>
@@ -28,21 +28,19 @@
         <constructor-arg index="2" value="30" />
     </bean>
 
-    <bean id="Ranbir" class="com.stackroute.domain.Actor">
+    <bean id="Jordan" class="com.stackroute.domain.Actor">
         <constructor-arg index="0"  value="Ranbir"  />
         <constructor-arg index="1" value="Male" />
         <constructor-arg index="2" value="30" />
     </bean>
 
-    <bean id="blackmail" scope="prototype" class="com.stackroute.domain.Movie">
-        <property name="actor"  ref="imran" />
+    <bean id="blackmail"  class="com.stackroute.domain.Movie" autowire="byName" >
+
     </bean>
     <bean id="Avengers"  scope="prototype" class="com.stackroute.domain.Movie">
         <property name="actor"  ref="Captain America" />
     </bean>
 
-    <bean name="Rockstar,Jordan"  scope="prototype" class="com.stackroute.domain.Movie" >
-        <constructor-arg index="0" ref="Ranbir"/>
-
-    </bean>
+<!--    <bean id="Rockstar" class="com.stackroute.domain.Movie" autowire="byType">-->
+<!--    </bean>-->
 </beans>

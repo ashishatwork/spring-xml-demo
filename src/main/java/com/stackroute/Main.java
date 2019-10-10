@@ -29,13 +29,15 @@ public class Main
         Actor actNew = (Actor)context.getBean("Kriti");
         System.out.println(actNew.toString());
 
-        Movie movieNew2= (Movie)context.getBean("Rockstar");
-        System.out.println(movieNew2.getActor());
+//        Movie movieNew2= (Movie)context.getBean("Rockstar");
+//        System.out.println(movieNew2.getActor());
+//
+//        System.out.println(movieNew1==movieNew2);
+//
+//        Movie movieNew3= (Movie)context.getBean("Jordan");
+//        System.out.println(movieNew3.getActor());
 
-        System.out.println(movieNew1==movieNew2);
 
-        Movie movieNew3= (Movie)context.getBean("Jordan");
-        System.out.println(movieNew3.getActor());
 
 
     }
